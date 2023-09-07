@@ -3,7 +3,7 @@
 This is for storing instructions for the plus assignments.
 
 ## Important
-* Please name your repos correctly (``<KTH-ID>-task-X``), it makes grading easier.  
+* Please name your repos correctly (``<KTH-ID>-<task name>``), it makes grading easier. E.g. ``bwidman-rustIntro``
 
 ## Reading material
 The Rust Book - https://doc.rust-lang.org/stable/book/  

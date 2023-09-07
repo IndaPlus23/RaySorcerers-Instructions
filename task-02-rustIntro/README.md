@@ -11,18 +11,18 @@ Modified by: Isak Larsson
 
 ### Prepare for your assigment
 
-Your first assignment is turned in by uploading it to a repository named `<KTH_ID>-task-2` (ex. ``isaklar-task-2``) under the `INDAPlus22` organisation. Be careful to get the spelling right.
+Your first assignment is turned in by uploading it to a repository named `<KTH_ID>-<task name>` (ex. `bwidman-rustIntro`) under the `IndaPlus23` organisation. Be careful to get the spelling right.
 
 The grade to an assigment is left in the form of an issue with "Pass", "Komplettering", or "Fail" in the title. In case of "Komplettering", read the instructions on what to adjust down in the issue description. Leave a comment on the issue upon reupload of the assignment. "Pass" and "Fail" are self explanatory. 
 
-1) Create a repository named `<KTH_ID>-task-2`.
+1) Create a repository named `<KTH_ID>-<task name>`. (ex. `bwidman-rustIntro`)
 2) Clone your newly created repository.
-`git clone git@github.com:INDAPlus21/<KTH_ID>-task-2.git`
+`git clone git@github.com:IndaPlus23/<KTH_ID>-<task name>.git`
 3) Create one Rust crate (term for application or library) per subassignment. 
 
 #### How to create a Rust application (_binary_) crate
 
-1) Navigate in your terminal or command prompt to `<KTH_ID>-task-2`.
+1) Navigate in your terminal or command prompt to `<KTH_ID>-<task name>`.
 2) Initialise your Rust crate.
 `cargo init <crate_name>`
 3) Navigate into your newly created root directory.

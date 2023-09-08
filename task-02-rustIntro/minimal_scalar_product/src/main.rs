@@ -2,6 +2,7 @@
  * Example solution to Kattis problem Minimal Scalar Product.
  * See: https://open.kattis.com/problems/minimumscalar
  * Author: Viola Söderlund <violaso@kth.se>
+ * Edit: Benjamin Widman <bwidman@kth.se>
  */
 
 use std::io;
@@ -12,7 +13,6 @@ fn main() {
     let input = io::stdin();
 
     let mut lines = input
-        .lock()                                                 // lock stream and produce readable buffer
         .lines()                                                // get vector where each element is a line from input
         .map(|_line| _line.ok().unwrap());                      // for every line, assuming it is returned with no error and is not None, convert to string
 

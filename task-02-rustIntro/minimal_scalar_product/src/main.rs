@@ -6,7 +6,6 @@
  */
 
 use std::io;
-use std::io::prelude::*;
 
 fn main() {
     // get standard input stream

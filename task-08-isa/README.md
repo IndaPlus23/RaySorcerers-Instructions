@@ -15,12 +15,12 @@ Your language must be an 32-bit assembly language with 16-bit instructions. See 
 | **Code**                    | **Size and Flexibility**                                                                                                                   |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | `op` _(operation)_          | 4 bits operation code gives room for up to 16 instructions (doesn't have to be 16).                                                        |
-| `rs`/`rt`/`rd` _(registry)_ | 3 bits registry addresses gives room for 8 registers.                                                                                      |
-| `imm` _(immidiate)_         | 6-12 bits immidiate values give room (at most) for the unsigned values 0-31 or the signed values (-16)-15.                                 |
+| `rs`/`rt`/`rd` _(register)_ | 3 bits register addresses gives room for 8 registers.                                                                                      |
+| `imm` _(immediate)_         | 6/12 bits immediate values, which for unsigned integers give room for 0-63 (6-bit)/0-4065 (12 bit).                                        |
 
-Think carefully of how your instructions are encoded. More registries may mean a smaller instruction set or smaller immidiates. The above table is only an example for how you may divide your availiable bits.
+Think carefully of how your instructions are encoded. More registers may mean a smaller instruction set or smaller immediates. The above table is only an example for how you may divide your availiable bits.
 
-Your registries should be 32 bits in size, meaning values ranging from 0 to 4,294,967,295 (unsigned) and −2,147,483,648 to 2,147,483,647 (signed).
+Your registers should be 32 bits in size, meaning values ranging from 0 to 4,294,967,295 (unsigned) and −2,147,483,648 to 2,147,483,647 (signed).
 
 Lastly, remember to give your language a cool name!
 

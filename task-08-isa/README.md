@@ -1,6 +1,7 @@
 # DD1337 Week 9
 Author: Viola Söderlund  
 Modified: Isak Larsson
+Modified 2.0: Benjamin Widman & Daniel Strömberg
 ## Assembly Language Design
 
 MIPS? What is this, 1985? Time for an upgrade. We'll make our own assembly language with blackjack and... cool instructions!

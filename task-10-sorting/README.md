@@ -1,12 +1,14 @@
 # DD1338 Week 10
 
+WELCOME TO ALGORITHMS AND DATASTRUCTURES, a critically acclaimed series on "what's *fast*?".
+
 ## Pretty Sorting
 
-Sorting doesn't have to be boring. Your assignment this week is to implement a handful of sorting algorithms and to visulise them graphically.
+Sorting doesn't have to be boring. Your assignment this week is to implement a handful of sorting algorithms and to visualize them graphically.
 
 The sorting algoritms are _selection sort_, _insertion sort_, _merge sort_ (you may choose whatever merge sort type) and at least one sorting algoritm of your choise. Choose something fun! See [this list](https://www.geeksforgeeks.org/sorting-algorithms/) for inspiration.
 
-### Psudo Code for Least Mandatory Implementations
+### Pseudo Code for Least Mandatory Implementations
 ```
 # INSERTION SORT #
 

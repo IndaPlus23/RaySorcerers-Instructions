@@ -14,7 +14,7 @@ Book: https://natureofcode.com/book/preface/
 
 1) Create a repository named `<KTH_ID>-simulation` under the `INDAPlus23` organisation and clone it. 
 2) Navigate into your newly created repository and start writing.
-    - Implement the logic of a chapter of choise.
+    - Implement the logic of part of a chapter of choise.
     - Visualise the logic, either like the book samples, or something more creative.
     - Consider writing unit tests as practise.
 

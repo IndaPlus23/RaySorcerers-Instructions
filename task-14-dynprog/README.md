@@ -23,7 +23,7 @@ This week, like some other weeks, you may choose between two different assignmen
 The idea is that you will work with dynamic programming this week no matter which assignment you choose. Of course, you can also do the regular Java assignment.
 
 ### ADK LAB2
-[Here](https://kth.instructure.com/courses/21037/assignments/124042) you will have access to preparatory questions for the lab. On the same page you will find "[Labblydelsen](https://kth.instructure.com/courses/21037/assignments/124028)", which is where you want to head to find the instructions for the lab itself.
+[Here](https://kth.instructure.com/courses/21037/assignments/124042) you will have access to preparatory questions for the lab. On the same page you will find "[Labblydelsen](https://kth.instructure.com/courses/21037/assignments/124028)", which is where you want to head to find the instructions for the lab itself. Note: you can't access the Java file mentioned in the instructions so you will have to implement the base code yourself.
 
 You will also find the link to the [Kattis problem](https://kth.kattis.com/courses/DD2350/adk23/assignments/owpvwm/problems/kth.adk.spelling) that you need to pass for this assignment. We have provided you with test cases and a big input file to test locally. This is the same input format as Kattis!
 

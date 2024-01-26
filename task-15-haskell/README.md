@@ -1,11 +1,11 @@
 # DD1338 Week 15
-Edited by: Benjamin Widman
+Edited by: Benjamin Widman, Daniel Strömberg ;)
 
 So long for-loops, hello recursion!
 This week we are going to learn a language from the functional paradigm: Haskell.
 
 ## Task
-Solve the intro lab to Programming Paradigms on [Kattis](https://kth.kattis.com/courses/DD1360/progp24/assignments/fymgmo/problems/kth.progp.warmup).
+Solve the intro lab to Programming Paradigms on [Kattis](https://kth.kattis.com/courses/DD1360/progp23/assignments/ami67s/problems/kth.progp.warmup).
 
 ## Questions
 Know the answers to these questions and be prepared to be able to answer them.

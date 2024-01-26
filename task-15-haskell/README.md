@@ -5,7 +5,7 @@ So long for-loops, hello recursion!
 This week we are going to learn a language from the functional paradigm: Haskell.
 
 ## Task
-Solve this Kattis-problem: https://kth.kattis.com/courses/DD1360/progp24/assignments/fymgmo/problems/kth.progp.warmup
+Solve the intro lab to Programming Paradigms on [Kattis](https://kth.kattis.com/courses/DD1360/progp24/assignments/fymgmo/problems/kth.progp.warmup).
 
 ## Questions
 Know the answers to these questions and be prepared to be able to answer them.
@@ -26,7 +26,7 @@ addOne (l:ls) = (l+1):(addOne ls)
  
 ## Prepare assignment
 1. As usual create a repo with the name `<kth-id>-haskell`.
-2. Install Haskell via this excellent link: https://www.haskell.org/ghcup/
+2. [Install Haskell](https://www.haskell.org/ghcup/)
 3. Write solutions to the Kattis problems and screenshot that you've passed the judge.
 
 ## Reading material

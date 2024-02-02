@@ -6,6 +6,10 @@ friend(benjamin, daniel).
 friend(daniel, matteus).
 
 
+student(Person):-
+    human(Person),
+    \+ asse(Person).
+
 % functions, also called rules or predicates
 friend_of_a_friend(A, B):-
     friend(A, X),
@@ -37,7 +41,6 @@ reverse_naive([Head|Tail1], Reversed) :-
 reverse_acc(List, Tail) :-
     reverse_acc(List, [], Tail).
 
-% 
 reverse_acc([], Reversed, Reversed).
 reverse_acc([Head|Tail], Acc, Reversed) :-
     reverse_acc(Tail, [Head|Acc], Reversed).

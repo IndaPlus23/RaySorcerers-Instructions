@@ -33,7 +33,7 @@ _In your SWI-Prolog environment_:
 
 ### Prepare for your assigment
 
-1) Create a repository named `<KTH_ID>-task-10`.
+1) Create a repository named `<KTH_ID>-task-16`.
 2) Clone your newly created repository.
 3) Create one `.pl` file for the entire assignment.
 

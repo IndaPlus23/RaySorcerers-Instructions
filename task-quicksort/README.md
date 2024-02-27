@@ -21,12 +21,9 @@ Info about quicksort and some well-known optimizations can be read about on [Wik
 
 The Kattis assignment states that you should make a Java class who's function it's supposed to invoke. You plus students of course want to be able use other languages as well and have granular control over input so you can achieve maximum speed. For this it is still possible to read the input from stdin (input from command line) and output your answer to stdout (output into command line). The format Kattis follows for the assignment is as follows.
 
-It begins with the number of elements to sort followed by every element on separate lines:
+It begins with the number of elements to sort followed by every element, separated by spaces:
 ```
-3
-2
-1
-3
+3 2 1 3
 ```
 After sorting these elements you output them sorted on one line seperated by spaces:
 ```

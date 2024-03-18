@@ -1,18 +1,42 @@
-### Deadline:
-This work should be completed before the exercise on **Friday 22nd of March**.
+# Parallel Performance
+For the final task, we investigate the performance gains we can achieve by enabling parallelism and building programs that encourage concurrency as much as possible.
 
-### Instructions
+### 💀 Deadline
+This work should be completed before the exercise on **Thursday 19th April**.
+
+### 👩‍🏫 Instructions
 For instructions on how to do and submit the assignment, please see the
 [assignments section of the course instructions](https://gits-15.sys.kth.se/inda-23/course-instructions#assignments).
 
-### Homework
-Study the following course literature:
+### 📝 Preparation
+In Canvas there is a single activity called `Task Preparation` with a link to online material. You **must attempt all the questions** for the relevant task. You also must have accepted the section invitation via email to be able to access the material.
 
-- Read the following from the [Fundamentals of Concurrent Programming](http://yourbasic.org/golang/concurrent-programming/)
+You can also review the lecture slides: 
+- [Concurrency Patterns and Mutexes](https://docs.google.com/presentation/d/193b7qpcEW3WdqmFGlA-4j9HL0FN0FdTtjYLuMg7cG7g/edit#slide=id.p)
+- [Group Synchronisation and Parallel Go](https://docs.google.com/presentation/d/15kkxEB998IV6hYOX_E-hacRMHelsNqtMgl45M8kSEOg/edit#slide=id.p)
+
+And read the companion literature:
   - [Mutual exclusion](http://yourbasic.org/golang/mutex-explained/)
   - [Efficient parallel computation](http://yourbasic.org/golang/efficient-parallel-computation/)
 
-### Task 1 - Matching Behaviour
+Finally, if you have not pushed an task submission before using Git/Github, then watch our [handy guide](https://www.youtube.com/watch?v=Sp5AASmX4no&list=PLZtN6QLX2rBA_gL6zs-qijIDihx-p2tO8).
+
+### ✅ Learning Goals
+* Understanding synchronisation in concurrent Go programs
+* Modifying existing code to take advantage of concurrency and parallelism
+
+### 🚨 Troubleshooting Guide
+If you have any questions or problems, follow this procedure: <br/>
+
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-23/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
+
+We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination.
+
+### 🏛 Assignment
+
+#### Task 1 - Matching Behaviour
 
 Take a look at the program [matching.go](src/matching.go). Explain what happens and why it happens if you make the following changes. Try first to reason about it, and then test your hypothesis by changing and running the program.
 
@@ -23,7 +47,7 @@ Take a look at the program [matching.go](src/matching.go). Explain what happens 
 
 Hint: Think about the order of the instructions and what happens with arrays of different lengths.
 
-### Task 2 - Fractal Images
+#### Task 2 - Fractal Images
 
 The file [julia.go](src/julia.go) contains a program that creates Julia Set
 fractal images and writes them to file. You can watch a quick explainer on the Julia Set
@@ -68,7 +92,7 @@ Please note that simply making everything concurrent with more and more Gorounti
 Make sure you add a comment in [julia.go](src/julia.go) with your **original
 runtime** and your **improved runtime**.
 
-### Task 3 - MapReduce
+#### Task 3 - MapReduce
 
 In the final task, you will be applying the MapReduce model for improving a word frequency program.
 
@@ -76,7 +100,7 @@ In the final task, you will be applying the MapReduce model for improving a word
 
 A word frequency analysis of a document will return a summary of the word counts for all unique words in the document. Whilst this can be solved efficiently using a map data structure in a sequential program, the performance can be improved by parallelising the program.
 
-> **Assistant's note:** Typically we ignore case when counting the frequency so 'Hello', 'HELLO' and 'hello' are all counted as 'hello', so remember to convert all strings to lower case.
+> **Assistant's note:** Typically we ignore case when counting the frequency so 'Hello', 'HELLO' and 'hello' are all counted as 'hello', so remember to convert all strings to lower case. We also ignore punctuation marks, so these must be removed as well.
 
 By splitting the document into sub-documents and conducting a partial count in parallel (_Map_ task), we can arrive at the solution by combining all the partial results into a final result (_Reduce_ task).
 
@@ -84,10 +108,13 @@ Read the code in [singleworker/words.go](src/singleworker/words.go) and complete
 
 - Implementation for the `WordCount` function
 - Reading a text file into a string in the `main` function
+- Filtering duplicate versions of words in different cases, removing punctuation marks, etc
 - Check that the unittest passes
 - Log the runtime performance in the table below
 
 Once you are satisfied with the singleworker, move into [mapreduce/words.go](src/mapreduce/words.go) and parallelise the program in order to improve the performance.
+
+> **Assistant's note:** Part of the challenge here is identifying the different tasks that can be made parallel. This can happen at multiple levels so pay attention for opportunities to increase the performance.
 
 - Update the `WordCount` function with the Map and Reduce tasks, using goroutines to parallelise and a channel to gather partial results
 - Check that the unittest passes
@@ -101,3 +128,9 @@ Once you are satisfied with the singleworker, move into [mapreduce/words.go](src
 | mapreduce    |          yyy |
 
 And with that, you are on your way to Google-scale problems ;-)
+
+This task was designed by:               <br>
+Simon Larsén                             <br>
+Anton Lyxell                             <br>
+Stefan Nilsson                           <br>
+Ric Glassey                              <br>

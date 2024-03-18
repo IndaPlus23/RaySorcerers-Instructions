@@ -1,18 +1,47 @@
-### Deadline:
-This work should be completed before the exercise on **Friday 22nd of March**.
+# Introduction to Go
+Welcome to DD1396. In this task we will become acquainted with the Go programming language as well as touching upon its builtin concurrency features - goroutines and channels.
 
-### Instructions
+### 💀 Deadline
+This work should be completed before the exercise on **Friday 22nd March**.
+
+### 👩‍🏫 Instructions
 For instructions on how to do and submit the assignment, please see the
 [assignments section of the course instructions](https://gits-15.sys.kth.se/inda-23/course-instructions#assignments).
 
-### Homework
-Study the following course literature
+### 📝 Preparation
+This year we are trying **question-based learning**. 
 
+In Canvas there is a single activity called `Task Preparation` with a link to online material. You **must attempt all the questions** for the relevant task. You also must have accepted the section invitation via email to be able to access the material.
+
+You can also review the lecture slides: 
+- [Parallel and Concurrent Programming](https://docs.google.com/presentation/d/1vb4F1Bu_ElXI6nR48lhfbN3O6iSo_3LUez8XShioHLU/edit#slide=id.p)
+- [Overview of Go](https://docs.google.com/presentation/d/1t59UE1mWf-VIxr1hHkojHJ2U-vlGVFi5oFh1ufIeqSA/edit#slide=id.p)
+
+And read the companion literature:
 - [Go for Java Programmers](http://yourbasic.org/golang/go-java-tutorial/)
-- [Fundamentals of Concurrent Programming](http://yourbasic.org/golang/concurrent-programming/)
-- [Goroutines](http://yourbasic.org/golang/goroutines-explained/)
+- Fundamentals of Concurrent Programming:
+    - [Goroutines](http://yourbasic.org/golang/goroutines-explained/)
+    - [Channels](https://yourbasic.org/golang/channels-explained/)
 
-### Task 1 - Go Environment
+Finally, if you have not pushed an task submission before using Git/Github, then watch our [handy guide](https://www.youtube.com/watch?v=Sp5AASmX4no&list=PLZtN6QLX2rBA_gL6zs-qijIDihx-p2tO8).
+
+### ✅ Learning Goals
+* Setup a functioning Go environment
+* Compare and contrast Go with either Java or Python
+* Use goroutines and channels to achieve concurrency
+
+### 🚨 Troubleshooting Guide
+If you have any questions or problems, follow this procedure: <br/>
+
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-23/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
+
+We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination.
+
+### 🏛 Assignment
+
+#### Task 1 - Go Environment
 
 The first task is to determine that you have a functioning Go environment on
 the computer that you are working from.
@@ -21,7 +50,7 @@ the computer that you are working from.
 - On your own computer - Goto the [downloads page](https://golang.org/dl/) for
   and follow the installation instructions for your preferred operating system.
 
-### Task 2 - A Tour of Go
+#### Task 2 - A Tour of Go
 
 In this task we shall follow the online exercises hosted on
 [A Tour of Go](http://tour.golang.org/welcome/1). Start at the beginning and
@@ -51,7 +80,7 @@ submissions:
 > need to worry about it as long as you make sure to run `go fmt` before
 > committing, but it may be good to know.
 
-### Task 3 - Alarm Clock
+#### Task 3 - Alarm Clock
 
 In this task you will explore time functions using Go. Create a file called
 `alarmclock.go` and write a function `Remind(text string, delay time.Duration)`
@@ -93,7 +122,7 @@ format your code.
 > [`time.Format`](https://golang.org/pkg/time/#Time.Format), read it's
 > documentation, and look through the example carefully.
 
-### Task 4 - Two Part Sum
+#### Task 4 - Two Part Sum
 
 In this task, you will write _and test_ a function to sum an array
 concurrently. When you are done with this section, make sure that you have
@@ -102,7 +131,7 @@ written and committed:
 * At least two new tests for the `ConcurrentSum` function.
 * Implemented `ConcurrentSum` such that it passes all tests.
 
-### Task 4.1 - Go `testing` framework
+##### Task 4.1 - Go `testing` framework
 Start out by reading
 [Chp 12 of the Golang book](https://www.golang-book.com/books/intro/12) for a
 brief introduction to the `testing` framework. You are also encouraged to try
@@ -140,7 +169,7 @@ Now, **write at least two additional tests** in
 [`src/twopartsum/twopartsum_test.go`](src/twopartsum/twopartsum_test.go) and
 make sure that they fail properly before moving on to task 4.2.
 
-### Task 4.2 - Implementing the concurrent sum function
+##### Task 4.2 - Implementing the concurrent sum function
 Now that the testing is out of the way, you can get down to implementing the
 `ConcurrentSum` function. It adds all of the numbers in an array by splitting
 the array in half and then having two Go routines take care of a half each.
@@ -170,3 +199,10 @@ func ConcurrentSum(a []int) int {
 
 Implement your solution in
 [`src/twopartsum/twopartsum.go`](src/twopartsum/twopartsum.go).
+
+### 🙏 Acknowledgments
+This task was designed by:               <br>
+- Simon Larsén                             <br>
+- Anton Lyxell                             <br>
+- Stefan Nilsson                           <br>
+- Ric Glassey                              <br>

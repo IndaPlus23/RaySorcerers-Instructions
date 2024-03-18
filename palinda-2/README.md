@@ -1,22 +1,46 @@
-### Deadline:
-This work should be completed before the exercise on **Friday 22nd of March**.
+# Concurrency Conundrums
+In this task we will try to dive into the difficulties that concurrency creates; both in debugging existing code and developing new code.
 
-### Instructions
-For instructions on how to do and submit the assignment, please see
-the
+### 💀 Deadline
+This work should be completed before the exercise on **Friday 12th April**.
+
+### 👩‍🏫 Instructions
+For instructions on how to do and submit the assignment, please see the
 [assignments section of the course instructions](https://gits-15.sys.kth.se/inda-23/course-instructions#assignments).
 
-### Homework
-Study the following course literature:
+### 📝 Preparation
+In Canvas there is a single activity called `Task Preparation` with a link to online material. You **must attempt all the questions** for the relevant task. You also must have accepted the section invitation via email to be able to access the material.
 
-- Read the following from the [Fundamentals of Concurrent Programming](http://yourbasic.org/golang/concurrent-programming/)
-  - [Channels](http://yourbasic.org/golang/channels-explained/)
+You can also review the lecture slides: 
+- [Channels & Coordination](https://docs.google.com/presentation/d/1I46lo9wX3BSZwLD6AXMPcS1Rto5peC16hciNgwRqYqs/edit#slide=id.p)
+- [Data races, Deadlocks & Dining Philosophers](https://docs.google.com/presentation/d/14Y6YIHBsGDgNzhILRfu7Qubl0jrzoInc4sex_pCUNqY/edit#slide=id.p)
+
+And read the companion literature:
   - [Select](http://yourbasic.org/golang/select-explained/)
   - [Data races](http://yourbasic.org/golang/data-races-explained/)
   - [Detecting data races](http://yourbasic.org/golang/detect-data-races/)
   - [Deadlock](http://yourbasic.org/golang/detect-deadlock/)
+  - [Waiting and Wait groups](https://yourbasic.org/golang/wait-for-goroutines-waitgroup/)
 
-### Task 1 - Debugging Concurrent Programs
+Finally, if you have not pushed an task submission before using Git/Github, then watch our [handy guide](https://www.youtube.com/watch?v=Sp5AASmX4no&list=PLZtN6QLX2rBA_gL6zs-qijIDihx-p2tO8).
+
+### ✅ Learning Goals
+* Detecting data races and deadlocks as concurrent bugs
+* Debugging concurrency bugs in existing code
+* Developing a concurrent solution
+
+### 🚨 Troubleshooting Guide
+If you have any questions or problems, follow this procedure: <br/>
+
+1. Look at this week's [posted issues](https://gits-15.sys.kth.se/inda-23/help/issues). Are other students asking about your problem?
+2. If not, post a question yourself by creating a [New Issue](https://gits-15.sys.kth.se/inda-23/help/issues/new). Add a descriptive title, beginning with "Task *x*: *summary of problem here*"
+3. Ask a TA in person during the [weekly lab](https://queue.csc.kth.se/Queue/INDA). Check your schedule to see when the next lab is.
+
+We encourage you to discuss with your course friends, but **do not share answers**! Similarily, use of AI services  🤖 are great to *help explain things*, but please **do not submit AI-generated solutions** - you must be both responsible for your own solutions and be able to explain them under examination.
+
+### 🏛 Assignment
+
+#### Task 1 - Debugging Concurrent Programs
 In this task, you will be provided with two buggy programs. For each program,
 you should:
 
@@ -24,18 +48,20 @@ you should:
 2. Fix the bug.
 3. Explain why your solution fixes the bug.
 
-#### Buggy program 1
+##### Buggy program 1
 [src/bug01.go](src/bug01.go)
 
-#### Buggy program 2
+##### Buggy program 2
 [src/bug02.go](src/bug02.go)
+
+Please provide your answers [here](docs/README.md).
 
 > **Assistant's requirement:** You are not allowed to move or remove the
 > time.Sleep(10 * time.Millisecond) statement in the Print function. A
 > deterministic solution (e.g. using a channel or WaitGroup) is required and
 > removing the sleep is only a quick fix.
 
-### Task 2 - Many Senders; Many Receivers
+#### Task 2 - Many Senders; Many Receivers
 The program [many2many.go](src/many2many.go) contains four
 producers that together send 32 strings over a channel. At the
 other end there are two consumers that receive the strings.
@@ -54,10 +80,17 @@ program.
 * Can you be sure that all strings are printed before the program
   stops?
 
+Please provide your answers [here](docs/README.md).
+
 Finally, modify the code by adding a new WaitGroup that waits for
 all consumers to finish.
 
-### Task 3 - Pythia, the Oracle of Delphi
+> **Assistant's requirement:** The syntax for waiting and wait groups is fairly 
+> simple - see the preparation link above in case you have not already read it 
+> through before attempting the task...who would even contemplate doing that?
+
+
+#### Task 3 - Pythia, the Oracle of Delphi
 
 The code in [oracle.go](src/oracle.go) contains the outline for a program that
 will answer 'questions' (like a chatbot, but worse).  Complete the `Oracle`
@@ -83,3 +116,10 @@ assignment, you should also make the following improvements:
 * Parse input for specific keywords ("What is the meaning of life?") and create a response ("Ah, life! ...")
 * Prints answers and predictions one character at a time with a short delay
 * Your own creative chat-bot-like idea :-)
+
+### 🙏 Acknowledgments
+This task was designed by:               <br>
+- Simon Larsén                             <br>
+- Anton Lyxell                             <br>
+- Stefan Nilsson                           <br>
+- Ric Glassey                              <br>
